@@ -43,7 +43,7 @@ class AppHandler:
 
         # 3.得到请求响应，然后将OpenAI的响应传递给前端
         completion = client.chat.completions.create(
-            model="gpt-3.5-turbo-16k",
+            model="deepseek-flash",
             messages=[
                 {"role": "system", "content": "你是OpenAI开发的聊天机器人，请根据用户的输入回复对应的信息"},
                 {"role": "user", "content": req.query.data},

@@ -4,6 +4,8 @@
     <option name="sourcePathsSet">
       <set>
         <option value="$PROJECT_DIR$/venv/Lib/site-packages" />
+        <option value="$PROJECT_DIR$/pkg" />
+        <option value="$PROJECT_DIR$/internal" />
       </set>
     </option>
   </component>

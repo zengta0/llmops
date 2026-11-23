@@ -1,5 +1,6 @@
 from internal.service import AppService
 from pkg.response import success_json, validate_error_json, success_message
+from uuid import UUID
 import uuid
 from internal.schema.app_schema import CompletionReq
 from openai import OpenAI

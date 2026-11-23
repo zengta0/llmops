@@ -27,6 +27,7 @@
 | [05-5-LCEL与Runnable.md](./05-5-LCEL与Runnable.md) | LCEL、`RunnableSequence` / `RunnableParallel` / `RunnablePassthrough` | for 循环串联、`ThreadPoolExecutor` 并行、手写 RAG |
 | [05-6-回调与可观测.md](./05-6-回调与可观测.md) | `BaseCallbackHandler` / `StdOutCallbackHandler` / LangSmith | 每个调用点手写日志与计时 |
 | [05-7-落地与换厂商.md](./05-7-落地与换厂商.md) | `debug()` 逐行拆解、换模型类 | 手写等价 `debug()`、换厂商要改哪些地方 |
+| [05-8-记忆模块与Runnable进阶.md](./05-8-记忆模块与Runnable进阶.md) | Memory / 会话历史 / Runnable 进阶方法 | 手写摘要缓冲记忆、list[dict] 手动维护历史 |
 
 ---
 

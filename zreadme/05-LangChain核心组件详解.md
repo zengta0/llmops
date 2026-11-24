@@ -1,8 +1,8 @@
 # 05 - LangChain 核心组件详解
 
-> 落地代码：`internal/handler/app_handler.py` 的 `debug()`
+> 落地代码：`../internal/handler/app_handler_1.py` 的 `debug()`
 > 前置阅读：`04-后端架构与请求链路.md`
-> 本篇为**总览 + 索引**，各模块已拆成独立文档，每篇末尾都附「不用 LangChain 时怎么写」的对照实现。
+> 本篇为 **总览 + 索引**，各模块已拆成独立文档，每篇末尾都附「不用 LangChain 时怎么写」的对照实现。
 
 ## 读完你能做什么
 
@@ -46,7 +46,7 @@
 ### 不用 LangChain 时：同一件事要手写一遍
 
 上面说的「拼字符串 → 组 messages → create → 抠 `choices[0].message.content`」，展开就是下面这样
-（项目已安装 `openai` SDK，`app_handler.py` 里也 import 了它）：
+（项目已安装 `openai` SDK，`app_handler_1.py` 里也 import 了它）：
 
 ```python
 import os

@@ -627,7 +627,7 @@ chain.invoke(2, config={"configurable": {"name": "慕小课"}})
 
 2. 建目录：`storage/memory/`（并加进 `.gitignore`，聊天记录不该提交）。
 
-3. 改 `internal/handler/app_handler.py` 的 `debug()`：套用第七节代码，注意把模型名换回 `deepseek-flash`，`base_url` 仍走 `.env` 的 `OPENAI_API_BASE`。
+3. 改 `../internal/handler/app_handler_1.py` 的 `debug()`：套用第七节代码，注意把模型名换回 `deepseek-flash`，`base_url` 仍走 `.env` 的 `OPENAI_API_BASE`。
 
 4. 验收：连续两轮请求同一 `app_id`——
 

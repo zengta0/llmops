@@ -1,6 +1,6 @@
 # 05 - LangChain 核心组件详解
 
-> 落地代码：`../internal/handler/app_handler_1.py` 的 `debug()`
+> 落地代码：`../internal/handler/app_handler.py` 的 `debug()`（记忆版，LangChain 1.x）；`app_handler_1.py` 保留单轮旧版作对照
 > 前置阅读：`04-后端架构与请求链路.md`
 > 本篇为 **总览 + 索引**，各模块已拆成独立文档，每篇末尾都附「不用 LangChain 时怎么写」的对照实现。
 
@@ -27,7 +27,9 @@
 | [05-5-LCEL与Runnable.md](./05-5-LCEL与Runnable.md) | LCEL、`RunnableSequence` / `RunnableParallel` / `RunnablePassthrough` | for 循环串联、`ThreadPoolExecutor` 并行、手写 RAG |
 | [05-6-回调与可观测.md](./05-6-回调与可观测.md) | `BaseCallbackHandler` / `StdOutCallbackHandler` / LangSmith | 每个调用点手写日志与计时 |
 | [05-7-落地与换厂商.md](./05-7-落地与换厂商.md) | `debug()` 逐行拆解、换模型类 | 手写等价 `debug()`、换厂商要改哪些地方 |
-| [05-8-记忆模块与Runnable进阶.md](./05-8-记忆模块与Runnable进阶.md) | Memory / 会话历史 / Runnable 进阶方法 | 手写摘要缓冲记忆、list[dict] 手动维护历史 |
+| [05-8-记忆模块与Runnable进阶.md](./05-8-记忆模块与Runnable进阶.md) | Memory / 会话历史 / Runnable 进阶方法 | 手写摘要缓冲记忆、`BaseChatMessageHistory` 子类 + JSON 落盘 |
+
+> 状态说明：`05-8` 的记忆链路**已在本项目落地** —— `../internal/core/memory.py`（`FileChatMessageHistory`，3 轮窗口裁剪）、`app_handler.py` 的 `debug()`（`RunnableWithMessageHistory` + `session_id=app_id`）。落地写法与「已移除 / 已过时」API 清单见该篇第零节与第八节。
 
 ---
 
